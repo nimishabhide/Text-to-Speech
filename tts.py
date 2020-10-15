@@ -24,3 +24,4 @@ t = st.text_input('Input your sentence here:')
 language="en"
 output=gTTS(text=t,lang=language,slow=False)
 output.save("voice.mp3")
+st.audio("voice.mp3")
