@@ -23,5 +23,7 @@ st.sidebar.markdown('<b>Email id:nbhide.nb@gmail.com</b>', unsafe_allow_html=Tru
 t = st.text_input('Input your sentence here:') 
 language="en"
 output=gTTS(text=t,lang=language,slow=False)
-output.save("voice.mp3")
-st.audio("voice.mp3")
+output.save("voice.ogg")
+audio_file = open('voice.ogg', 'rb')
+audio_bytes = audio_file.read()
+st.audio(audio_bytes, format='audio/ogg')
