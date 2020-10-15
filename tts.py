@@ -5,7 +5,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 html_temp = """
     <div style="background-color:black ;padding:10px">
-    <h1 style="color:white;text-align:center;">REGRESSION AND CLASSIFICATION ON THE GO!!</h1>
+    <h1 style="color:white;text-align:center;">TALK WITH ME</h1>
     </div>
     """
 st.markdown(html_temp, unsafe_allow_html=True)
@@ -16,12 +16,13 @@ html_temp69 = """
     """
 st.markdown(html_temp69, unsafe_allow_html=True)
 st.sidebar.header("RegClass")
-st.sidebar.markdown('<b>Just upload a .txt file and it will read it out to you</b>', unsafe_allow_html=True)
+st.sidebar.markdown('<b>Just copy-paste your text here and I will read it out to you</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>This helps you in meeting your fast approaching deadlines by being highly efficient.</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>Created by:Nimisha Bhide</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>Email id:nbhide.nb@gmail.com</b>', unsafe_allow_html=True)
 t = st.text_input('Input your sentence here:') 
 language="en"
 output=gTTS(text=t,lang=language,slow=False)
-output.save('output.mp3')
+dt=output.save('output.mp3')
+print(dt)
 os.system("start output.mp3")
