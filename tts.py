@@ -17,7 +17,6 @@ html_temp69 = """
 st.markdown(html_temp69, unsafe_allow_html=True)
 st.sidebar.header("Your friend who will take the place of your grandma and read out stories to you")
 st.sidebar.markdown('<b>Just copy-paste your text here and I will read it out to you</b>', unsafe_allow_html=True)
-st.sidebar.markdown('<b>This helps you in meeting your fast approaching deadlines by being highly efficient.</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>Created by:Nimisha Bhide</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>Email id:nbhide.nb@gmail.com</b>', unsafe_allow_html=True)
 try:
