@@ -25,9 +25,9 @@ if uploaded_file is not None:
     df = extract_data(uploaded_file)
     fh=open(df,"r")
     myText=fh.read()
-language="en"
-output=gTTS(text=myText,lang=language,slow=False)
-output.save("voice.ogg")
-audio_file = open('voice.ogg', 'rb')
-audio_bytes = audio_file.read()
-st.audio(audio_bytes, format='audio/ogg')
+    language="en"
+    output=gTTS(text=myText,lang=language,slow=False)
+    output.save("voice.ogg")
+    audio_file = open('voice.ogg', 'rb')
+    audio_bytes = audio_file.read()
+    st.audio(audio_bytes, format='audio/ogg')
