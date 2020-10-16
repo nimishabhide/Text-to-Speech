@@ -20,14 +20,10 @@ st.sidebar.markdown('<b>Just copy-paste your text here and I will read it out to
 st.sidebar.markdown('<b>This helps you in meeting your fast approaching deadlines by being highly efficient.</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>Created by:Nimisha Bhide</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>Email id:nbhide.nb@gmail.com</b>', unsafe_allow_html=True)
-uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
-if uploaded_file is not None:
-    df = extract_data(uploaded_file)
-    fh=open(df,"r")
-    myText=fh.read()
-    language="en"
-    output=gTTS(text=myText,lang=language,slow=False)
-    output.save("voice.ogg")
-    audio_file = open('voice.ogg', 'rb')
-    audio_bytes = audio_file.read()
-    st.audio(audio_bytes, format='audio/ogg')
+st.text_input("PLEASE ENTER THE TEXT HERE")
+language="en"
+output=gTTS(text=myText,lang=language,slow=False)
+output.save("voice.ogg")
+audio_file = open('voice.ogg', 'rb')
+audio_bytes = audio_file.read()
+st.audio(audio_bytes, format='audio/ogg')
