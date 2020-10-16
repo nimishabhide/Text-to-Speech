@@ -20,7 +20,7 @@ st.sidebar.markdown('<b>Just copy-paste your text here and I will read it out to
 st.sidebar.markdown('<b>This helps you in meeting your fast approaching deadlines by being highly efficient.</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>Created by:Nimisha Bhide</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>Email id:nbhide.nb@gmail.com</b>', unsafe_allow_html=True)
-st.text_input("PLEASE ENTER THE TEXT HERE")
+myText=st.text_input("PLEASE ENTER THE TEXT HERE")
 language="en"
 output=gTTS(text=myText,lang=language,slow=False)
 output.save("voice.ogg")
