@@ -21,16 +21,9 @@ st.sidebar.markdown('<b>Created by:Nimisha Bhide</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>Email id:nbhide.nb@gmail.com</b>', unsafe_allow_html=True)
 try:
     myText=st.text_input("PLEASE ENTER THE TEXT HERE")
-    if st.button('FAST'):
+    if st.button('READ'):
         language="en"
         output=gTTS(text=myText,lang=language,slow=False)
-        output.save("voice.ogg")
-        audio_file = open('voice.ogg', 'rb')
-        audio_bytes = audio_file.read()
-        st.audio(audio_bytes, format='audio/ogg')
-    if st.button('SLOW'):
-        language="en"
-        output=gTTS(text=myText,lang=language,slow=True)
         output.save("voice.ogg")
         audio_file = open('voice.ogg', 'rb')
         audio_bytes = audio_file.read()
