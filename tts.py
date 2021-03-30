@@ -20,7 +20,7 @@ st.sidebar.markdown('<b>Just copy-paste your text here and I will read it out to
 st.sidebar.markdown('<b>Created by:Nimisha Bhide</b>', unsafe_allow_html=True)
 st.sidebar.markdown('<b>Email id:nbhide.nb@gmail.com</b>', unsafe_allow_html=True)
 try:
-    myText=st.text_input("PLEASE ENTER THE TEXT HERE")
+    myText=st.file_uploader("Upload your input CSV file", type=["pdf"],value=0,key=0)
     if st.button('READ'):
         language="en"
         output=gTTS(text=myText,lang=language,slow=False)
